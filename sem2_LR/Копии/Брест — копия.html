@@ -1,0 +1,378 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        body {
+            margin: 0;
+        }
+        /*Шрифты*/
+
+        @font-face { /*Для заголовка*/
+            font-family: "Oswald-Regular";
+            font-style: normal;
+            src: url("fonts/Oswald-Regular.ttf") format("truetype");
+        }
+
+        h1 {
+            font-family: 'Oswald-Regular', sans-serif;
+            font-weight: 700;
+            font-size: 36px;
+        }
+        h2 {
+            font-family: 'Oswald-Regular', sans-serif;
+            font-weight: 400;
+            font-size: 36px;
+        }
+        h3 {
+            font-family: 'Oswald-Regular', sans-serif;
+            font-weight: 400;
+            font-size: 13px;
+        }
+        .Inf p {
+            font-family: 'Oswald-Regular', sans-serif;
+            font-weight: 400;
+            font-size: 14px;
+        }
+        @font-face { /*Для Текста*/
+            font-family: "Oswald-Light";
+            font-style: normal;
+            src: url("fonts/Oswald-Light.ttf") format("truetype");
+        }
+        section {
+            font-family: 'Oswald-Light', sans-serif;
+            font-weight: 300;
+            font-size: 24px;
+            line-height: 36px;
+        }
+
+          
+      
+            /*Верстка*/
+            .container { /*свойства для главного контейнера в котором вссе элементы*/
+            width: 100%;
+            padding-right: 0px;
+            padding-left: 0px;
+            margin-left: 0px;
+            margin-right: 0px;
+            display: flex;
+            flex-wrap: wrap; /*бедет перенос на другую строку*/
+            justify-content: space-around;
+            background-color: #90B7E4;
+            border:solid 2px black;
+           
+        }
+        /*header*/
+        /*header*/
+        header, section {
+            flex-basis: 70%;
+            height: 260px;
+            background-color: #e0e0e0;
+            justify-content: center;
+        }
+
+        .smIm {
+            position: absolute;
+            background-color: transparent;
+            justify-content: flex-end;
+            width: 70%;
+        }
+
+            .smIm img {
+                margin: 20px 20px 0 20px;
+                height: 47px;
+            }
+
+
+        .Im {
+            display: flex;
+            flex-basis: 100%;
+            height: 260px;
+            object-fit: cover;
+            position: relative;
+        }
+
+        .row {
+            margin-top: 200px;
+            align-items: flex-end;
+            width: 70%;
+            z-index: 1;
+            position: absolute;
+            background-color: transparent;
+        }
+
+        .Im img {
+            max-width: 100%;
+        }
+
+        .button { /*Основное для кнопок*/
+            font-weight: 700;
+            text-decoration: none;
+            user-select: none;
+            padding: .5em 2em;
+            outline: none;
+            border-radius: 1px;
+            width: 101px;
+            height: 25px;
+            top: 177px;
+            background: #EEE8E8;
+            border-radius: 12px;
+            margin-bottom: 10px;
+        }
+
+        .dropdown { /*начало выпадающего списка*/
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+            .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+
+                .dropdown-content a:hover {
+                    background-color: #ddd;
+                }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        /*Конец выпадающего списка */
+
+        /*section*/
+        section {
+            height: 692px;
+        }
+        /*первая картинка с краткой инфой */
+        
+        
+        .Inf {
+            margin-top:0px;
+            width: 100%;
+            height: 142px;
+        }
+            .Inf h1 {
+              
+                align-self: center;
+                align-items: center;
+            }
+            .Inf p {
+                display: inline-block;
+                margin-bottom: 0px;
+                align-self:flex-end;
+            }
+        .img {
+            width: 100%;
+            height: 515px;
+          
+        }
+      
+        /*инфа про достопр */
+
+        .Title {
+            justify-content: center;
+            align-items: center;
+            flex-direction: column; /*меняем направление поотока Выравниваем по вертикали*/
+
+        }
+        .OsnInf {
+            height: 1091px;
+        }
+        .OsnInf2 {
+            height: 1700px;
+        }
+
+            .OsnInf img, .OsnInf2 img {
+                height: 598px;
+            }
+        
+        svg { /*для линии*/
+           
+            margin-top:-25px;
+        }
+        h3 {
+            margin-top: -10px;
+        }
+        p { /*для текста под картинками*/
+            width: 650px;
+            line-height: 36px;
+        }
+        /* медиазапросы под инфу основную */
+        @media screen and (max-width:880px){
+           section{
+               color:red;
+           }
+            .OsnInf img, .OsnInf2 img {
+                height: 470px;
+            }
+            
+
+        }
+
+        @media screen and (max-width:580px) { /*под телефоны*/
+            section {
+                color: blue;
+            }
+
+
+            .OsnInf img, .OsnInf2 img {
+                display: block;
+                max-width: 100%;
+                height: auto;
+            }
+            .button { /*Основное для кнопок*/
+                font-weight: 700;
+                width: 60px;
+                height: 15px;
+            }
+        }
+
+
+      
+      
+
+        </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Для всей страницы -->
+       
+        <header class="container ">
+
+            <div class="row  container  ">
+                <!-- под кнопки-->
+
+                <div class="button dropdown">
+                    Города
+                    <div class="dropdown-content">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                    </div>
+                </div>
+                <div class="button">
+                    <!-- Секция футера 2 -->
+                </div>
+                <div class="button">
+                    <!-- Секция футера 2 -->
+                </div>
+                <div class="button">
+                    <!-- Секция футера 2 -->
+                </div>
+            </div>
+
+
+            <div class="Im">
+
+                <img src="C:\instit\lab\курсоваяКЯР\img\header\osn.jpg">
+
+            </div>
+            <div class="smIm container">
+                <img src="C:\instit\lab\курсоваяКЯР\img\header\BEL.png">
+                <img src="C:\instit\lab\курсоваяКЯР\img\header\zamk.png">
+            </div>
+        </header>
+
+        <main class="container ">
+            <!-- секция основной информации     -->
+
+            <section class="container">
+
+                <div class="container Inf ">
+                    <h1>Достопримечательнотси Бреста </h1>
+                    <p class="container">основан: 1019   |  культурная программа    </p>
+                </div>
+                <!--Картинка главная-->
+
+
+                <img src="C:\instit\lab\курсоваяКЯР\img\brest\osnBrest.png">
+
+            </section>
+
+            <section class="container OsnInf2">
+                <div class="container Title">
+                    <h2> Брестская крепость </h2>
+                    <svg width="271" height="7" viewBox="0 0 271 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 3.5H271" stroke="white" stroke-width="6" />
+                    </svg>
+                    <h3> (ул. Героев обороны Брестской крепости) </h3>
+                </div>
+                <img src=".\img\brest\brest.jpg">
+                <img src=".\img\brest\brestskaya-krepost.jpg">
+                <p>Укрепленная цитадель, построенная на месте Брестского замка в 1833 году. Сооружение состоит из ряда казарм из красного кирпича, стен двухметровой толщины и центральной цитадели. В 1913 году было возведено второе кольцо оборонительных построек. К началу Первой мировой войны крепость считалась одной из самых неприступных в Европе. 22 июня 1941 года она приняла на себя один из первых ударов немецких войск. В 1965 году получила звание крепость-герой. </p>
+            </section>
+
+
+            <section class="container OsnInf">
+                <div class="container Title">
+                    <h2> Монумент "Мужество" </h2>
+                    <svg width="271" height="7" viewBox="0 0 271 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 3.5H271" stroke="white" stroke-width="6" />
+                    </svg>
+                    <h3> (Брест, Мемориальный комплекс «Брестская крепость-герой») </h3>
+                </div>
+                <div>
+                    <img src="C:\instit\lab\курсоваяКЯР\img\brest\jajda.png">
+                </div>
+
+                <p> Памятник защитникам Брестской крепости, созданный по проекту московского архитектора А.П. Кибальникова и воздвигнутый на площади Церемониалов в 1971 году. В высоту грандиозный монумент достигает 36 метров, в длину – 54 метра. Он изображает бюст бойца с решительным и нахмуренным лицом на фоне советского знамени, готового до конца сопротивляться натиску захватчиков. Перед скульптурой находится могила 850 защитников крепости.  </p>
+            </section>
+
+
+            <section class="container OsnInf2">
+                <div class="container Title">
+                    <h2> Николаевский собор </h2>
+                    <svg width="271" height="7" viewBox="0 0 271 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 3.5H271" stroke="white" stroke-width="6" />
+                    </svg>
+                    <h3> (Мемориальный комплекс "Брестская крепость-герой") </h3>
+                </div>
+                <img src=".\img\brest\NicolSobr.jpg">
+                <img src=".\img\brest\NicolSobrVN.jpg">
+                <p>
+                    Православный храм на территории Брестской крепости, возведенный в византийском стиле в середине XIX столетия. В начале XX века, когда Брест находился в составе Польше, его превратили в костел. Во время ВОВ сооружение довольно сильно пострадало. В 1972 году его законсервировали, а в 1994 году вернули верующим. Реставрационные работы продолжались много лет и завершились только в 2005 году.
+                </p>
+            </section>
+
+            <section class="container OsnInf2">
+                <div class="container Title">
+                    <h2> "Берестье" </h2>
+                    <svg width="271" height="7" viewBox="0 0 271 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 3.5H271" stroke="white" stroke-width="6" />
+                    </svg>
+                    <h3> (Госпитальный остров Брестской крепости) </h3>
+                </div>
+                <img src=".\img\brest\berest.jpg">
+                <img src=".\img\brest\berestVN.jpg">
+                <p>
+                    Археологическая экспозиция, основанная в 1982 году на месте раскопок. Основу коллекции составляют находки, обнаруженные на территории городища XIII века, в том числе жилые и хозяйственные постройки, поднятые с глубины 4 метров и восстановленные согласно историческому облику. В «Берестье» можно многое узнать о традиционном жизненном укладе славян, посмотреть на предметы, бывшие в обиходе много столетий назад.
+                </p>
+            </section>
+
+
+
+
+
+
+
+
+        </main>
+
+    </div>
+
+
+
+</body>
+</html>

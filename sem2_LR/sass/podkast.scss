@@ -1,0 +1,91 @@
+ /*osnVerst*/
+ @font-face { /*Для заголовка*/
+    font-family: "Oswald-Regular";
+    font-style: normal;
+    src: url("../fonts/Oswald-Regular.ttf") format("truetype");
+}
+/*Верстка*/
+.container { /*свойства для главного контейнера в котором вссе элементы*/
+    display: flex;
+    flex-wrap: wrap; /*бедет перенос на другую строку*/
+    justify-content: space-around;
+    border: solid 1px black;
+}
+body {
+    margin: 0;
+    background: #638095;
+}
+
+.GlavnInf {
+    margin-top: 100px;
+    height: 100%;
+    background: #EADFDF;
+    width: 90%;
+    border-top: 3px dashed black;
+    align-items: center;
+    .Im {
+        align-items:center;
+            width: 40%;
+            height: 100%;
+            img{
+              margin:10px;
+    width: 356px;
+    height: 328px;
+            }
+    }
+    .Inform {
+        width: 59%;
+        p {
+            display: inline-block;
+            width: 90%;
+            font-family: 'Oswald-Regular', sans-serif;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 25px;
+            line-height: 37px;
+        }
+    }
+
+    .audioTrack{  /*для аудидорожки*/
+        width:100%;
+        justify-content:flex-start;
+        align-items:center;
+    img{
+        height:80px;
+        width:80px;
+    }
+    }
+figure{
+    width:60%;}
+audio{
+    width:80%;
+}
+
+}
+        .GlavnInf .Im, .GlavnInf .Inform {
+            height: 70%;
+        }
+
+        @media  (max-width:1016px)  {
+    .GlavnInf{
+        width: 100%;
+    }
+}
+       
+@media  (max-width:702px)  {
+    .GlavnInf {
+        flex-direction: column;
+        .Im {
+            width: 100%;
+            img{
+                margin:10px;
+                width:80%;
+                height:40%;
+            }
+        }
+        .Inform {
+            width: 100%;}
+    }
+
+    }
+   

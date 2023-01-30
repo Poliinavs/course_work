@@ -1,0 +1,277 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+}
+
+/*Шрифты*/
+@font-face {
+  /*Для заголовка*/
+  font-family: "Oswald-Regular";
+  font-style: normal;
+  src: url("fonts/Oswald-Regular.ttf") format("truetype");
+}
+
+h1 {
+  font-family: 'Oswald-Regular', sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+}
+
+h2 {
+  font-family: 'Oswald-Regular', sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+}
+
+h3 {
+  font-family: 'Oswald-Regular', sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+}
+
+.Inf p {
+  font-family: 'Oswald-Regular', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+@font-face {
+  /*Для Текста*/
+  font-family: "Oswald-Light";
+  font-style: normal;
+  src: url("fonts/Oswald-Light.ttf") format("truetype");
+}
+
+section {
+  font-family: 'Oswald-Light', sans-serif;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 36px;
+}
+
+/*Верстка*/
+.container {
+  /*свойства для главного контейнера в котором вссе элементы*/
+  width: 100%;
+  padding-right: 0px;
+  padding-left: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  /*бедет перенос на другую строку*/
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: #90B7E4;
+  border: solid 2px black;
+}
+
+/*header*/
+/*header*/
+header, section {
+  -ms-flex-preferred-size: 70%;
+      flex-basis: 70%;
+  height: 260px;
+  background-color: #e0e0e0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.smIm {
+  position: absolute;
+  background-color: transparent;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 70%;
+}
+
+.smIm img {
+  margin: 20px 20px 0 20px;
+  height: 47px;
+}
+
+.Im {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  height: 260px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+}
+
+.row {
+  margin-top: 200px;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  width: 70%;
+  z-index: 1;
+  position: absolute;
+  background-color: transparent;
+}
+
+.Im img {
+  max-width: 100%;
+}
+
+.button {
+  /*Основное для кнопок*/
+  font-weight: 700;
+  text-decoration: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  padding: .5em 2em;
+  outline: none;
+  border-radius: 1px;
+  width: 101px;
+  height: 25px;
+  top: 177px;
+  background: #EEE8E8;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.dropdown {
+  /*начало выпадающего списка*/
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/*Конец выпадающего списка */
+/*section*/
+section {
+  height: 692px;
+}
+
+/*первая картинка с краткой инфой */
+.Inf {
+  margin-top: 0px;
+  width: 100%;
+  height: 142px;
+}
+
+.Inf h1 {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Inf p {
+  display: inline-block;
+  margin-bottom: 0px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.img {
+  width: 100%;
+  height: 515px;
+}
+
+/*инфа про достопр */
+.Title {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  /*меняем направление поотока Выравниваем по вертикали*/
+}
+
+.OsnInf {
+  height: 1091px;
+}
+
+.OsnInf2 {
+  height: 1700px;
+}
+
+.OsnInf img, .OsnInf2 img {
+  height: 598px;
+}
+
+svg {
+  /*для линии*/
+  margin-top: -25px;
+}
+
+h3 {
+  margin-top: -10px;
+}
+
+p {
+  /*для текста под картинками*/
+  width: 650px;
+  line-height: 36px;
+}
+
+/* медиазапросы под инфу основную */
+@media screen and (max-width: 880px) {
+  section {
+    color: red;
+  }
+  .OsnInf img, .OsnInf2 img {
+    height: 470px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  /*под телефоны*/
+  section {
+    color: blue;
+  }
+  .OsnInf img, .OsnInf2 img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  .button {
+    /*Основное для кнопок*/
+    font-weight: 700;
+    width: 60px;
+    height: 15px;
+  }
+}
+/*# sourceMappingURL=City.css.map */

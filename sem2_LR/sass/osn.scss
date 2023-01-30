@@ -1,0 +1,264 @@
+$osnColor:#AE5A26;
+$font: 'Oswald-Regular', sans-serif;
+$BoderRad: 12px;
+
+@font-face { /*Для заголовка*/
+    font-family: "Oswald-Regular";
+    font-style: normal;
+    src: url("../fonts/Oswald-Regular.ttf") format("truetype");
+}
+body{
+    margin:0px;
+    width: 100%;
+}
+/*Верстка*/
+.container { /*свойства для главного контейнера в котором вссе элементы*/
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap; /*бедет перенос на другую строку*/
+    justify-content: space-around;
+    border: solid 1px black;
+}
+.Osn { /*первая страница с картикой и текстом*/
+    height: 893px;
+    justify-content: end;
+ 
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    h2{
+        display: inline-block;
+        font-family:$font;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 78px;
+        line-height: 101px;
+        color: #FFFFFF;
+        position: absolute;
+        width: 50%;
+        top:100px;
+    }
+}
+/*страница с картинками */
+.Pag {
+    height: 100%;
+    h1 {
+        display: inline-block;
+        font-family: $font;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 56px;
+        line-height: 80px;
+    text-align: center; 
+    }
+    .PagImg {
+        height: 75%;
+        flex-basis: 90%;
+        &> div { /* Дочерний селектор */
+            width: 254px;
+            height:100%;
+        }
+    }   
+    img {
+        margin-top:0px;
+         width:100%;
+        height: 450px;
+        &:first-child:hover {
+            box-shadow: 1px 1px #524949, 2px 2px #716A6A, 3px 3px #716A6A, 4px 4px #716A6A, 5px 5px #7D7878, 6px 6px #807B7B, 7px 7px #807B7B;
+            -webkit-transform: translateX(-7px);
+            transform: translateX(-7px);
+        }
+    }
+    .MainInfP   {
+        img {
+            width:80px;
+            height:80px;
+            &:hover {
+                animation: bounce 1s;
+            }
+        }
+        p {
+            font-family:$font;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 32px;
+            line-height: 47px;
+            text-align: center;
+            margin-bottom: -20px;
+        }
+    }   
+}
+@keyframes bounce {
+    0%, 20%, 60%, 100% {
+        transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-20px);
+        transform: translateY(-20px);
+    }
+
+    80% {
+        transform: translateY(-10px);
+        transform: translateY(-10px);
+    }
+}
+
+.button { /*Основное для кнопок*/
+    font-family:$font;
+    border-radius:$BoderRad;
+    padding:10px 10px 10px 10px;
+    margin: 0px 25px 0 25px;
+    
+    }
+
+
+/*картинки в кругах*/
+.castle {
+    height: 100%;
+    width:90%;
+    background: #253B4A;
+    img{
+        margin-top:15px;
+        height:250px;
+    }
+    .Infcastle{
+        width:270px;
+        height:500px;
+    }
+    h1 {
+        font-family: $font;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 53px;
+        color: #FFFFFF;
+    }
+    h2{
+        display:none;
+    }
+    figcaption {
+        height: 10%;
+        justify-content: center;
+        align-items: flex-start;
+        img {
+            height: 28px;
+            width: 29px;
+            &:hover{
+                h2{
+                    border-radius: $BoderRad;
+                    font-weight: 200;
+                    font-size: 15px;
+                    line-height: 20px;
+                        display: inline-block;
+                        background-color: #FFFFFF;
+                        width: 80%;
+                        z-index: 1;
+                        margin-top: -130px;;
+                    }
+            }
+        }
+
+    } 
+    
+}
+.scale {
+    overflow: hidden; 
+    img {
+        transition: 2s;
+        display: block; 
+        &:hover {
+            transform: scale(0.9); 
+           }
+       }
+   }
+
+
+    .castle .button, .znachki  .button{
+        font-size:19px;
+        background: #AE5A26;
+        height:25px;
+    }
+    .znachki .button:hover , .Infcastle .button:hover ,form .button:hover {
+        background: rgba(0,0,0,0);
+        color:  #AE5A26;
+        box-shadow: inset 0 0 0 3px  #AE5A26;
+    }
+    /*Значки с кнопкой*/
+    .znachki{
+        align-items:center;
+        height:200px;
+        img{
+            height:100px;
+         }
+    }
+
+    /*Форма*/
+ 
+        
+   .Formosn{
+       margin-top: -30px;
+        width:60%;
+        justify-content: center;
+        align-items: center;
+        background-color: #FFFFFF;
+        height: 100%;
+        text-align: center;
+        input {
+            display: block;
+            border: none;
+            background: #f2f2f2;
+            padding: 12px;
+            border-radius: $BoderRad;
+            width: 60%;
+      height: 51px;
+      font-size: 20px;
+        }
+        label{
+            font-family: $font;
+            font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 74px;
+        }
+        section{
+            align-items: center;
+            justify-content: center;
+            height: 150px;
+        }
+      .button{
+          background-color: $osnColor;
+      }
+    }
+
+    @media (max-width: 552px) {
+        .PagImg, .castle, .Formosn {
+            flex-basis: 100%;
+
+        }
+        .Infcastle{
+            margin-right: 33px;
+        }
+    }
+
+    
+
+//     form 
+//     form  .button {
+//         font-family: 'Oswald-Regular', sans-serif;
+//         font-style: normal;
+// font-weight: 600;
+// font-size: 90px;
+// line-height: 44px;
+//        width:10%;
+//       text-align: center;
+//         height: 25px;
+//         background: #AE5A26;
+//         font-size: 20px;
+//         padding:10px 10px -10px 10px;
+//         margin: 0px 25px 10px 25px;
+//     }
+    

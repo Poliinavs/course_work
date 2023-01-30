@@ -1,0 +1,319 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+   <style>
+        body {
+        margin: 0;}
+       /*Верстка*/
+       .container { /*свойства для главного контейнера в котором вссе элементы*/
+           width: 100%;
+           padding-right: 0px;
+           padding-left: 0px;
+           margin-left: 0px;
+           margin-right: 0px;
+           display: flex;
+           flex-wrap: wrap; /*бедет перенос на другую строку*/
+           justify-content: space-around; /*чтобы везде были равные отступы*/
+       }
+       .row {  /*строка для ячеек*/
+           display: -ms-flexbox;
+           display: flex;
+           -ms-flex-wrap: wrap;
+           flex-wrap: wrap;
+       }
+
+       .col__footer { /*настройка ячеек*/
+           -ms-flex: 1 0 0;
+           flex: 1 0 0;
+           position: relative;
+       }
+
+       /*Для основных контейнеров*/
+       .header {
+          
+           flex-basis: 70%;
+           height: 260px;
+           background-color: #e0e0e0;
+           
+       }
+
+       .nav {
+           flex-basis: 15%;
+           background-color: #493131;
+       }
+
+       .main {
+           margin-top:-10px;
+           top: 130px;
+           flex-basis: 70%;
+           background-color: #90B7E4;
+           justify-content: space-around;
+       }
+
+       /*все элементф header*/
+       .header img {
+           height: 100%;
+           width: 100%;
+           margin-top: 0px;
+           object-fit: cover;
+       }
+       .header .im {
+           margin-top:-41px;
+           display: flex;
+           height: 100%;
+           width: 100%;
+       }
+      
+       .button {/*Основное для кнопок*/
+           font-weight: 700;
+           text-decoration: none;
+           user-select: none;
+           padding: .5em 2em;
+           outline: none;
+           border-radius: 1px;
+           width: 101px;
+           height: 25px;
+            top: 177px;
+      
+           background: #EEE8E8;
+           border-radius: 12px;
+       }
+       .dropdown { /*начало выпадающего списка*/
+           display: inline-block;
+       }
+
+       .dropdown-content {
+           display: none;
+           position: absolute;
+           background-color: #f1f1f1;
+           min-width: 160px;
+           box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+           z-index: 1;
+       }
+
+           .dropdown-content a {
+               color: black;
+               padding: 12px 16px;
+               text-decoration: none;
+               display: block;
+           }
+
+               .dropdown-content a:hover {
+                   background-color: #ddd;
+               }
+
+       .dropdown:hover .dropdown-content {
+           display: block;
+       }
+       /*Конец выпадающего списка */
+
+
+       /*Все элементы main*/
+       .main img { /*основные свойства верххних катринок*/
+           border-radius: 15px;
+           width: 255px;
+           height: 234px;
+           transition: .5s ease;
+           margin: 30px 15px 0px 15px;
+         
+
+       }
+      .main img:hover {
+           opacity: 0.5;
+       }
+       .rect { /*основные свойства верххних прямоугольников со списком*/
+           background: #FEF7F7;
+           border-radius: 8px;
+           width: 202px;
+           height: 200px;
+           margin: -20px 0px 20px 29px;
+           background: #FEF7F7;
+           z-index: 1;
+       }
+      ul {
+           margin-left: 0;
+           padding-left: 15px;
+           padding-top: 5px;
+           margin-top: 0px;
+           list-style: none;
+       }
+
+        li { /*основные настройки шрифта в списках*/
+           line-height: 2.0;
+           text-align: left;
+           font-family: 'Roboto Slab';
+           font-weight: 600;
+           font-size: 16px;
+           color: #000000;
+       }
+
+       li:before { /*кружок перед текстом*/
+
+           content: '';
+           display: inline-block;
+           height: 8px;
+           width: 8px;
+           vertical-align: middle;
+           border-radius: 50%;
+           background-color: #000;
+           margin-right: 15px; /*оступ между маркером и текстом*/
+       }
+
+       a {
+           text-decoration: none;
+       }
+
+           a:hover {
+               text-decoration: underline;
+               color: #000000;
+           }
+           /*под разные экраны*/
+       @media screen and (min-width:680px) and (max-width:960px) {
+           .button { /*Основное для кнопок*/
+               font-weight: 700;
+               width: 60px;
+               height: 15px;
+             
+           }
+           .header .im {
+               margin-top: -48px;
+           }
+           
+       }
+    
+           @media screen and (min-width:480px) and (max-width:680px) {
+               .button { /*Основное для кнопок*/
+                   font-weight: 700;
+                   width: 60px;
+                   height: 15px;
+               
+               }
+               .header .im {
+                   margin-top: -63px;
+               }
+
+                   .button12 {
+                
+               }
+           }
+       
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="nav "> </div>
+
+        <header class="header container ">
+
+
+            <div class="row">
+                <div class="col__footer button dropdown">
+                    Города
+                    <div class="dropdown-content">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col__footer button">
+                    <!-- Секция футера 2 -->
+                </div>
+            </div>
+            <div class="row">
+                <div class=" col__footer button  button12">
+                    <!-- Секция футера 3 -->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col__footer button  button12">
+                    <!-- Секция футера 4 -->
+                </div>
+
+            </div>
+            <div class="im">
+            <img src="C:\instit\lab\курсоваяКЯР\img\header\osn.jpg">
+                </div>
+        </header>
+        <div class="nav "> </div>
+
+
+
+        <div class="nav "> </div>
+        <!-- Секция main-->
+        <main class="main container">
+
+
+
+            <!-- первый ряд картинок-->
+            <div class="row">
+                <div class="col col__footer">
+                    <img class="img1" src="C:\instit\lab\курсоваяКЯР\img\main\Brest.jpg">
+                    <div class="rect">
+                        <ul>
+                            <a href="http://htmlbook.ru/faq/kak-sdelat-chtoby-sloy-tselikom-byl-ssylkoy">
+                            <li> Брестская крепость </li></a>
+                            <a href="1.html">
+                            <li>«Жажда» </li> </a>
+                            <a href="1.html">
+                            <li>«Мужество» </li> </a>
+                            <a href="1.html">
+                            <li>Николаевский собор </li> </a>
+                            <a href="1.html">
+                            <li>Музей «5-й форт» </li> </a>
+                            <a href="1.html">
+                            <li>«Берестье»</li></a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col__footer">
+                    <img class="img2" src="C:\instit\lab\курсоваяКЯР\img\main\gomel.jpg">
+                    <div class="rect"> </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col__footer">
+
+                    <img class="img3" src="C:\instit\lab\курсоваяКЯР\img\main\grodno.jpg">
+                    <div class="rect"> </div>
+                </div>
+            </div>
+
+            <!-- второй ряд картинок-->
+            <div class="row">
+                <div class="col__footer">
+                    <img class="img1" src="C:\instit\lab\курсоваяКЯР\img\main\minsk.jpg">
+                    <div class="rect"> </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col__footer">
+                    <img class="img2" src="C:\instit\lab\курсоваяКЯР\img\main\mogilev.jpg">
+                    <div class="rect"> </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col__footer">
+
+                    <img class="img3" src="C:\instit\lab\курсоваяКЯР\img\main\vitebsk.jpg">
+                    <div class="rect"> </div>
+                </div>
+            </div>
+
+        </main>
+
+        <div class="nav "> </div>
+
+       
+
+    </div>
+</body>
+</html>

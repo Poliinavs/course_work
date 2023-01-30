@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Достопримечательности Беларуси</title>
+    <style>
+        .BEL {
+            position: absolute;
+            width: 57px;
+            height: 65px;
+            left: 938px;
+            top: 48px;
+        }
+      
+        body {
+            margin:0;
+            padding:0;
+            background-color: #969393;
+        }
+        
+        header {
+            position: relative;
+            left: 196px;
+            Width: 1125px;
+            Height: 300px;
+            top: 0px;
+            background-color: #D2D0D0;
+        }
+        /*Кнопки*/
+        .button {
+            position: absolute;
+            color: black;
+            padding: 10px;
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 28px;
+            border: none;
+            width: 151px;
+            height: 50px;
+            background: #EFE6E6;
+        }
+        .dropbtn { /*выпадающий список Города*/
+            
+            
+            left: 71px;
+            top: 200px;
+           
+        }
+
+        .dropdown {
+          
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            left: 71px;
+            top: 250px;
+        }
+
+            .dropdown-content a {
+
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+                .dropdown-content a:hover {
+                    background-color: #ddd;
+                }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #969393;
+        }
+       /*Конец выпадающего списка*/
+        .triangle {
+            height: 31px;
+            width: 20px;
+            left: 234px;
+            top: 200px;
+        }
+       /*Конец конопок*/
+        </style>
+</head>
+<body>
+    <header>
+        <img src="img\Belar.png" alt="Bel" class="BEL">
+
+        <div class="dropdown">
+            <button class="dropbtn button">Города</button>
+            <div class="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </div>
+
+        </div>
+        <div class=" button triangle">
+        </div>
+
+
+    </header>
+
+    <main>
+        <section>
+
+        </section>
+
+    </main>
+
+        <footer>
+
+        </footer>
+</body>
+</html>

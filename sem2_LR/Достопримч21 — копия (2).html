@@ -1,0 +1,300 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        .sb-view-area {
+            margin: auto;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+        .grid1 {
+            display: grid;
+            grid-template-areas:
+                "x header z" /*х и z  это боковые колонки*/
+                "x osn1 z"
+                "x osn2 z";
+            grid-template-columns: 100%;
+            grid-template-rows: 100%;
+            grid-template-columns: 14.3% 71.4% 14.3%;
+            grid-template-rows: 260px 444px 453px;
+        }
+        .grid2 {
+            border:solid black 2px;
+            display: grid;
+            grid-template-areas:
+                "a s d";
+            grid-template-columns: 100%;
+            grid-template-rows: 100%;
+            grid-template-columns: 33.3% 33.4% 33.3%;
+            grid-template-rows: 444px ;
+        }
+
+        main {
+            display: block;
+            margin-left: auto;
+            margin-right: auto
+        }                       
+
+        .dekst {
+            background-color: #969393;
+        }
+        /*header*/
+
+        .header {
+            position: relative;
+            background: url(img/osn.jpg) no-repeat;
+            background-size: cover; /*оно на весь блок*/
+            background-position: 0px -180px; /*контролируем смещение*/
+          
+        }
+        .BEL {
+            position: absolute;
+            width: 57px;
+            height: 65px;
+            right: 30px;
+            top: 0px;
+        }
+        /*Кнопки*/
+        .header .button {
+            margin:0px;
+            padding:0px;
+            position: absolute;
+            display: inline-block;
+            color: white;
+            top: 189px;
+            font-weight: 700;
+            text-decoration: none;
+            user-select: none;
+            padding: .5em 2em;
+            outline: none;
+            border: 2px solid;
+            border-radius: 1px;
+            transition: 0.2s;
+            background-color: #939393;
+            height:25px;
+            width:100px;
+
+            
+        }
+
+            .header .button:hover {
+                background: #494B4B;
+            }
+
+            .header .button:active {
+                background: white;
+            }
+
+        .header a.button4 { /*расположение кнопок*/
+            right: 60px;
+        }
+        .header a.button3 {
+            right: 300px;
+            
+        }
+        .header a.button2 {
+           left: 300px;
+        }
+
+        .header .button1 { /*выпадающий список Города*/
+            left: 60px;
+        }
+        .dropdown {
+            position: absolute;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+            .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+
+                .dropdown-content a:hover {
+                    background-color: #ddd;
+                }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        /*Конец выпадающего списка */
+        /*Конец header*/
+            /*Начало osn*/
+        .osn {
+            position: relative;
+        }
+            .osn img { /*основные свойства верххних катринок*/
+                position: absolute;
+                width: 255px;
+                height: 234px;
+                top: 40px;
+                transition: .5s ease;
+            }
+
+                    .img1 {
+                left: 78.75px;
+            }
+        .img2 {
+            left: 78.75px;
+            
+        }
+                 .img3 {
+                right: 78.75px;
+            }
+        .dark {
+        
+            background-color: #1B3148;
+    
+        }
+
+        img:hover{
+            opacity: 0.5;
+        }
+        .rect { /*основные свойства верххних прямоугольников со списком*/
+            position: absolute;
+            width: 195px;
+            height: 203px;
+            top: 234px;
+            background: #FEF7F7;
+        }
+
+         .rect1 {
+            left: 108.75px;
+        }
+        .rect2 {
+            left: 442.5px;
+        }
+         .rect3 {
+            right: 108.75px;
+        }
+
+        .osn ul {
+            margin-left: 0;
+            padding-left: 15px;
+            padding-top: 5px;
+            margin-top: 0px;
+            list-style: none;
+        }
+        .osn li { /*основные настройки шрифта в списках*/
+            line-height: 2.0;
+            text-align: left;
+            font-family: 'Roboto Slab';
+            font-weight: 600;
+           
+            font-size: 16px;
+            color: #000000;
+        }
+       
+        li:before { /*кружок перед текстом*/
+
+            content: '';
+            display: inline-block;
+            height: 8px;
+            width: 8px;
+            vertical-align: middle;
+            border-radius: 50%;
+            background-color: #000;
+            margin-right: 15px; /*оступ между маркером и текстом*/
+        }
+             a {
+                text-decoration: none;
+            }
+                a:hover {
+                    text-decoration: underline;
+                    color: #000000;
+                }
+
+        
+       
+    </style> 
+</head>
+<body>
+    <main>
+        <div class="grid1 sb-view-area">
+
+            <div class="dekst" style="grid-area: x;"></div>
+
+            <div class="header" style="grid-area: header;">
+                <img src="C:\instit\lab\курсоваяКЯР\img\header\Belar.png" alt="Bel" class="BEL">
+                <a href="#" class="button button4">кнопка4</a>
+                <a href="#" class="button button3">кнопка3</a>
+                <a href="#" class="button button2">кнопка2</a>
+
+                <div class=" button1 dropdown button ">
+                    Города
+                    <div class="dropdown-content">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="osn dark grid2" style="grid-area: osn1;">
+                <div style="grid-area: a;">
+                    <a href="1.html">  <img class=" img1 " src="C:\instit\lab\курсоваяКЯР\img\main\Brest.jpg"> </a>
+                    <div class="rect rect1">
+                        <ul>
+                            <a href="http://htmlbook.ru/faq/kak-sdelat-chtoby-sloy-tselikom-byl-ssylkoy">
+                            <li> Брестская крепость </li></a>
+                            <a href="1.html">
+                            <li>«Жажда» </li> </a>
+                            <a href="1.html">
+                            <li>«Мужество» </li> </a>
+                            <a href="1.html">
+                            <li>Николаевский собор </li> </a>
+                            <a href="1.html">
+                            <li>Музей «5-й форт» </li> </a>
+                            <a href="1.html">
+                            <li>«Берестье»</li></a>
+                        </ul>
+                    </div>
+                </div>
+                <div style="grid-area: s;">
+                    <img class="img2" src="C:\instit\lab\курсоваяКЯР\img\main\gomel.jpg">
+                    <div class="rect rect2"> </div>
+                </div>
+                <div style="grid-area: d;">
+                    <img class="img3" src="C:\instit\lab\курсоваяКЯР\img\main\grodno.jpg">
+                    <div class="rect rect3"> </div>
+                </div>
+
+               
+
+            </div>
+
+                <div class="osn dark" style="grid-area: osn2;">
+                    <img class="img1" src="C:\instit\lab\курсоваяКЯР\img\main\minsk.jpg">
+                    <img class="img2" src="C:\instit\lab\курсоваяКЯР\img\main\mogilev.jpg">
+                    <img class="img3" src="C:\instit\lab\курсоваяКЯР\img\main\vitebsk.jpg">
+                    <div class="rect rect1"> </div>
+                    <div class="rect rect2"> </div>
+                    <div class="rect rect3"> </div>
+                </div>
+
+
+                <div class="dekst" style="grid-area: z;"></div>
+            </div>
+    </main>
+</body>
+</html>
